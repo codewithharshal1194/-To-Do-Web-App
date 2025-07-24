@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Task Manager</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="sports-container">
+      <div class="header">
+        <h1><i class="fas fa-running"></i> SPORTS TASK MANAGER</h1>
+        <div class="theme-toggle">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </div>
+      </div>
+      
+      <div class="task-creator">
+        <div class="input-group">
+          <input type="text" id="task" placeholder="Enter your training task..." autocomplete="off">
+          <div class="datetime-group">
+            <input type="date" id="date">
+            <input type="time" id="time">
+          </div>
+        </div>
+        <button id="addTask" class="sport-btn">
+          <i class="fas fa-plus"></i> ADD TASK
+        </button>
+      </div>
+      
+      <div class="task-filters">
+        <button class="filter-btn active" data-filter="all">All Tasks</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      
+      <ul id="task-list" class="task-scroll"></ul>
+      
+      <div class="stats">
+        <span id="task-count">0 tasks remaining</span>
+        <button id="clear-completed" class="sport-btn ghost">Clear Completed</button>
+      </div>
+    </div>
+    
+    <div class="notification" id="notification"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
